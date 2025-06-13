@@ -56,7 +56,6 @@
       line-height: 1.6;
     }
 
-    /* BUY BUTTON + BSC BUTTON SHARED STYLES */
     .buy-button,
     .bsc-button {
       display: inline-flex;
@@ -88,7 +87,6 @@
       box-shadow: 0 6px 12px rgba(255, 170, 0, 0.5);
     }
 
-    /* SOCIAL ICONS */
     .social-icons {
       margin-top: 10px;
     }
@@ -101,6 +99,12 @@
     .social-icons img {
       width: 32px;
       height: 32px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .social-icons a:hover img {
+      transform: scale(1.15);
+      box-shadow: 0 4px 12px rgba(0, 122, 255, 0.4);
     }
 
     .bsc-link {

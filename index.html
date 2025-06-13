@@ -56,8 +56,9 @@
       line-height: 1.6;
     }
 
-    /* BUY BUTTON + EFFECTS */
-    .buy-button {
+    /* BUY BUTTON + BSC BUTTON SHARED STYLES */
+    .buy-button,
+    .bsc-button {
       display: inline-flex;
       align-items: center;
       margin-top: 30px;
@@ -70,14 +71,18 @@
       box-shadow: 0 4px 8px rgba(255, 204, 0, 0.4);
       transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
     }
-    .buy-button img {
+
+    .buy-button img,
+    .bsc-button img {
       width: 24px;
       height: 24px;
       margin-right: 10px;
       vertical-align: middle;
       object-fit: contain;
     }
-    .buy-button:hover {
+
+    .buy-button:hover,
+    .bsc-button:hover {
       background-color: #ffaa00;
       transform: scale(1.05);
       box-shadow: 0 6px 12px rgba(255, 170, 0, 0.5);
@@ -87,26 +92,26 @@
     .social-icons {
       margin-top: 10px;
     }
+
     .social-icons a {
       margin: 0 12px;
       display: inline-block;
     }
+
     .social-icons img {
       width: 32px;
       height: 32px;
     }
 
     .bsc-link {
-      display: inline-flex;
+      display: flex;
+      justify-content: center;
       align-items: center;
-      gap: 8px;
-      margin-top: 10px;
+      margin-top: 20px;
     }
-    .bsc-link img {
-      width: 20px;
-      height: 20px;
-      vertical-align: middle;
-      object-fit: contain;
+
+    .bsc-link a {
+      margin-left: 8px;
     }
   </style>
 </head>
@@ -123,10 +128,13 @@
       <p><strong>Network:</strong> BNB Smart Chain</p>
       <p><strong>Contract Address:</strong> <code>0x85af34aE1B1b96020034049157E27972702E046d</code></p>
 
-      <p class="bsc-link">
-        <img src="https://img.icons8.com/ios-filled/50/007AFF/search--v1.png" alt="Lupa">
-        <a href="https://bscscan.com/token/0x85af34aE1B1b96020034049157E27972702E046d" target="_blank">View on BscScan</a>
-      </p>
+      <!-- BSC LINK BUTTON -->
+      <div class="bsc-link">
+        <a class="bsc-button" href="https://bscscan.com/token/0x85af34aE1B1b96020034049157E27972702E046d" target="_blank">
+          <img src="https://img.icons8.com/ios-filled/50/007AFF/search--v1.png" alt="Lupa">
+          View on BscScan
+        </a>
+      </div>
 
       <!-- BUY BUTTON CENTERED -->
       <div style="text-align: center;">

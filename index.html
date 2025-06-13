@@ -148,6 +148,25 @@
       font-size: 14px;
       text-align: center;
     }
+    .footer-social {
+      margin-top: 20px;
+    }
+    .footer-social a {
+      margin: 0 10px;
+      display: inline-block;
+      background: rgba(255,255,255,0.05);
+      padding: 8px;
+      border-radius: 50%;
+    }
+    .footer-social img {
+      width: 28px;
+      height: 28px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .footer-social a:hover img {
+      transform: scale(1.15);
+      box-shadow: 0 4px 12px rgba(0, 122, 255, 0.4);
+    }
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(10px); }
       to { opacity: 1; transform: translateY(0); }
@@ -209,6 +228,14 @@
   </div>
 
   <footer>
+    <div class="footer-social">
+      <a href="https://x.com/PolishGold_" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/50/007AFF/x.png" alt="X (Twitter)">
+      </a>
+      <a href="https://t.me/PolishGoldOfficial" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111644.png" alt="Telegram">
+      </a>
+    </div>
     &copy; 2025 PolishGold. Made with ❤️ in Poland.
   </footer>
 </body>

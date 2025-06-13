@@ -4,17 +4,30 @@
   <meta charset="UTF-8">
   <title>PolishGold (PGLD)</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/PolishGold/polishgold-site/main/logo.png">
   <style>
     body {
       font-family: Arial, sans-serif;
       background: #111;
       color: #f5f5f5;
-      text-align: center;
-      padding: 30px;
+      margin: 0;
+      padding: 0;
     }
-    img {
-      max-width: 150px;
-      margin-top: 20px;
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: #1e1e1e;
+    }
+    nav img {
+      height: 40px;
+    }
+    nav a {
+      color: #ffd700;
+      margin-left: 15px;
+      text-decoration: none;
+      font-weight: bold;
     }
     .container {
       max-width: 700px;
@@ -22,9 +35,11 @@
       background: #1e1e1e;
       padding: 40px;
       border-radius: 12px;
+      animation: fadeIn 0.6s ease-in-out;
     }
     h1 {
       color: gold;
+      text-align: center;
     }
     h2 {
       color: #ffd700;
@@ -42,6 +57,7 @@
       margin-top: 25px;
       font-style: italic;
       color: #ccc;
+      text-align: center;
     }
     .whitepaper {
       margin-top: 40px;
@@ -55,7 +71,6 @@
       margin: 10px 0;
       line-height: 1.6;
     }
-
     .buy-button,
     .bsc-button {
       display: inline-flex;
@@ -70,7 +85,6 @@
       box-shadow: 0 4px 8px rgba(255, 204, 0, 0.4);
       transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
     }
-
     .buy-button img,
     .bsc-button img {
       width: 24px;
@@ -79,60 +93,94 @@
       vertical-align: middle;
       object-fit: contain;
     }
-
     .buy-button:hover,
     .bsc-button:hover {
       background-color: #ffaa00;
       transform: scale(1.05);
       box-shadow: 0 6px 12px rgba(255, 170, 0, 0.5);
     }
-
     .social-icons {
       margin-top: 10px;
+      text-align: center;
     }
-
     .social-icons a {
       margin: 0 12px;
       display: inline-block;
+      background: rgba(255,255,255,0.05);
+      padding: 8px;
+      border-radius: 50%;
     }
-
     .social-icons img {
       width: 32px;
       height: 32px;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
-
     .social-icons a:hover img {
       transform: scale(1.15);
       box-shadow: 0 4px 12px rgba(0, 122, 255, 0.4);
     }
-
     .bsc-link {
       display: flex;
       justify-content: center;
       align-items: center;
       margin-top: 20px;
     }
-
     .bsc-link a {
       margin-left: 8px;
+    }
+    code {
+      background: #222;
+      padding: 4px 6px;
+      border-radius: 4px;
+    }
+    footer {
+      margin-top: 60px;
+      color: #888;
+      font-size: 14px;
+      text-align: center;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+      }
+      .buy-button, .bsc-button {
+        flex-direction: column;
+        text-align: center;
+      }
+      .buy-button img, .bsc-button img {
+        margin: 0 0 10px 0;
+      }
     }
   </style>
 </head>
 <body>
+  <nav>
+    <img src="https://raw.githubusercontent.com/PolishGold/polishgold-site/main/logo.png" alt="Logo">
+    <div>
+      <a href="#whitepaper">Whitepaper</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="https://x.com/PolishGold_" target="_blank">X</a>
+    </div>
+  </nav>
+
   <div class="container">
-    <img src="https://raw.githubusercontent.com/PolishGold/polishgold-site/main/logo.png" alt="PolishGold Logo">
     <h1>PolishGold (PGLD)</h1>
-    <p>PolishGold is a BEP-20 token deployed on Binance Smart Chain with a fixed supply of 10,000,000 tokens. Designed for reliability, backed by the community.</p>
+    <p style="text-align: center;">PolishGold is a BEP-20 token deployed on Binance Smart Chain with a fixed supply of 10,000,000 tokens. Designed for reliability, backed by the community.</p>
 
     <div class="info">
       <p><strong>Token Name:</strong> PolishGold</p>
       <p><strong>Symbol:</strong> PGLD</p>
       <p><strong>Decimals:</strong> 18</p>
       <p><strong>Network:</strong> BNB Smart Chain</p>
-      <p><strong>Contract Address:</strong> <code>0x85af34aE1B1b96020034049157E27972702E046d</code></p>
+      <p><strong>Contract Address:</strong>
+        <code id="contract">0x85af34aE1B1b96020034049157E27972702E046d</code>
+        <button onclick="copyAddress()" style="margin-left: 10px; cursor: pointer;">📋</button>
+      </p>
 
-      <!-- BSC LINK BUTTON -->
       <div class="bsc-link">
         <a class="bsc-button" href="https://bscscan.com/token/0x85af34aE1B1b96020034049157E27972702E046d" target="_blank">
           <img src="https://img.icons8.com/ios-filled/50/007AFF/search--v1.png" alt="Lupa">
@@ -140,7 +188,6 @@
         </a>
       </div>
 
-      <!-- BUY BUTTON CENTERED -->
       <div style="text-align: center;">
         <a class="buy-button" href="https://pancakeswap.finance/swap?outputCurrency=0x85af34aE1B1b96020034049157E27972702E046d" target="_blank">
           <img src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" alt="Koszyk">
@@ -148,11 +195,10 @@
         </a>
       </div>
 
-      <!-- SOCIAL MEDIA -->
       <div style="text-align: center; margin-top: 30px; font-weight: bold; font-size: 18px;">
         Social Media:
       </div>
-      <div class="social-icons" style="text-align: center;">
+      <div class="social-icons">
         <a href="https://x.com/PolishGold_" target="_blank">
           <img src="https://img.icons8.com/ios-filled/50/007AFF/x.png" alt="X (Twitter)">
         </a>
@@ -166,30 +212,37 @@
       Created by Poles, for the world – rooted in history, built for the future.
     </div>
 
-    <div class="whitepaper">
+    <div class="whitepaper" id="whitepaper">
       <h2>Whitepaper</h2>
-
       <h3>Introduction</h3>
       <p>PolishGold (PGLD) is a community-driven BEP-20 token launched on the Binance Smart Chain. It is designed to represent values of reliability, strength, and national pride, with modern technology and strong tokenomics.</p>
-
       <h3>Tokenomics</h3>
       <p><strong>Total Supply:</strong> 10,000,000 PGLD<br>
         <strong>Token Standard:</strong> BEP-20<br>
         <strong>Burn Mechanism:</strong> Optional, future consideration<br>
         <strong>Distribution:</strong> 100% allocated to creator wallet on deployment</p>
-
-      <h3>Roadmap</h3>
+      <h3 id="roadmap">Roadmap</h3>
       <p><strong>Q2 2025:</strong> Token deployment & verification, basic website</p>
       <p><strong>Q3 2025:</strong> Community building</p>
       <p><strong>Q4 2025+:</strong> Partnership outreach, possible centralized exchange listing</p>
       <p><strong>2026:</strong> Ecosystem expansion and more use cases</p>
-
       <h3>Utility & Vision</h3>
       <p>PGLD may be used for community voting, exclusive access, and participation in PolishGold-branded products and services in the future.</p>
-
       <h3>Conclusion</h3>
       <p>PolishGold is more than just a token – it’s a symbol of innovation, unity, and forward-thinking.</p>
     </div>
   </div>
+
+  <footer>
+    &copy; 2025 PolishGold. Made with ❤️ in Poland.
+  </footer>
+
+  <script>
+    function copyAddress() {
+      const text = document.getElementById("contract").innerText;
+      navigator.clipboard.writeText(text);
+      alert("Address copied!");
+    }
+  </script>
 </body>
 </html>

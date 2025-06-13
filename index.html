@@ -6,16 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: "Segoe UI", "Roboto", sans-serif;
       background: #111;
       color: #f5f5f5;
       text-align: center;
       padding: 30px;
     }
-    img {
-      max-width: 150px;
-      margin-top: 20px;
-    }
+
     .container {
       max-width: 700px;
       margin: auto;
@@ -23,45 +20,61 @@
       padding: 40px;
       border-radius: 12px;
     }
+
+    img.logo {
+      width: 180px;
+      margin-bottom: 20px;
+    }
+
     h1 {
       color: gold;
+      font-size: 32px;
     }
+
     h2 {
       color: #ffd700;
       margin-top: 40px;
     }
+
     a {
       color: #1e90ff;
       text-decoration: none;
     }
+
     .info {
       margin-top: 20px;
       text-align: left;
     }
+
     .quote {
       margin-top: 25px;
       font-style: italic;
       color: #ccc;
     }
+
     .whitepaper {
       margin-top: 40px;
       text-align: left;
     }
+
     .whitepaper h3 {
       color: #f5f5f5;
       margin-top: 20px;
     }
+
     .whitepaper p {
       margin: 10px 0;
       line-height: 1.6;
     }
 
-    /* BUY BUTTON + BSC BUTTON SHARED STYLES */
+    /* SHARED BUTTON STYLES */
     .buy-button,
-    .bsc-button {
+    .bsc-button,
+    .private-button {
       display: inline-flex;
       align-items: center;
-      margin-top: 30px;
+      justify-content: center;
+      margin: 15px 10px 0;
       padding: 12px 24px;
       background-color: #ffcc00;
       color: #000;
@@ -73,7 +86,8 @@
     }
 
     .buy-button img,
-    .bsc-button img {
+    .bsc-button img,
+    .private-button img {
       width: 24px;
       height: 24px;
       margin-right: 10px;
@@ -82,13 +96,13 @@
     }
 
     .buy-button:hover,
-    .bsc-button:hover {
+    .bsc-button:hover,
+    .private-button:hover {
       background-color: #ffaa00;
       transform: scale(1.05);
       box-shadow: 0 6px 12px rgba(255, 170, 0, 0.5);
     }
 
-    /* SOCIAL ICONS */
     .social-icons {
       margin-top: 10px;
     }
@@ -117,7 +131,7 @@
 </head>
 <body>
   <div class="container">
-    <img src="https://raw.githubusercontent.com/PolishGold/polishgold-site/main/logo.png" alt="PolishGold Logo">
+    <img class="logo" src="https://raw.githubusercontent.com/PolishGold/polishgold-site/main/logo.png" alt="PolishGold Logo">
     <h1>PolishGold (PGLD)</h1>
     <p>PolishGold is a BEP-20 token deployed on Binance Smart Chain with a fixed supply of 10,000,000 tokens. Designed for reliability, backed by the community.</p>
 
@@ -128,29 +142,37 @@
       <p><strong>Network:</strong> BNB Smart Chain</p>
       <p><strong>Contract Address:</strong> <code>0x85af34aE1B1b96020034049157E27972702E046d</code></p>
 
-      <!-- BSC LINK BUTTON -->
-      <div class="bsc-link">
+      <!-- VIEW ON BSCSCAN BUTTON -->
+      <div>
         <a class="bsc-button" href="https://bscscan.com/token/0x85af34aE1B1b96020034049157E27972702E046d" target="_blank">
-          <img src="https://img.icons8.com/ios-filled/50/007AFF/search--v1.png" alt="Lupa">
+          <img src="https://img.icons8.com/ios-filled/50/007AFF/search--v1.png" alt="Search">
           View on BscScan
         </a>
       </div>
 
-      <!-- BUY BUTTON CENTERED -->
-      <div style="text-align: center;">
+      <!-- PRIVATE SALE BUTTON -->
+      <div>
+        <a class="private-button" href="https://www.dx.app/dxsale/view?address=0x1B92D918210a899a90dbB5c3be67d056c64e80e4&chain=56" target="_blank">
+          <img src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/64/000000/external-lock-user-interface-flatart-icons-outline-flatarticons.png" alt="Lock">
+          Private Sale PolishGold
+        </a>
+      </div>
+
+      <!-- BUY ON PANCAKESWAP BUTTON -->
+      <div>
         <a class="buy-button" href="https://pancakeswap.finance/swap?outputCurrency=0x85af34aE1B1b96020034049157E27972702E046d" target="_blank">
-          <img src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" alt="Koszyk">
+          <img src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" alt="Cart">
           Buy PGLD on PancakeSwap
         </a>
       </div>
 
-      <!-- SOCIAL MEDIA -->
+      <!-- SOCIAL MEDIA SECTION -->
       <div style="text-align: center; margin-top: 30px; font-weight: bold; font-size: 18px;">
         Social Media:
       </div>
-      <div class="social-icons" style="text-align: center;">
+      <div class="social-icons">
         <a href="https://x.com/PolishGold_" target="_blank">
-          <img src="https://img.icons8.com/ios-filled/50/007AFF/x.png" alt="X (Twitter)">
+          <img src="https://cdn-icons-png.flaticon.com/512/5968/5968804.png" alt="X (Twitter)">
         </a>
         <a href="https://t.me/PolishGoldOfficial" target="_blank">
           <img src="https://cdn-icons-png.flaticon.com/512/2111/2111644.png" alt="Telegram">
@@ -170,9 +192,9 @@
 
       <h3>Tokenomics</h3>
       <p><strong>Total Supply:</strong> 10,000,000 PGLD<br>
-        <strong>Token Standard:</strong> BEP-20<br>
-        <strong>Burn Mechanism:</strong> Optional, future consideration<br>
-        <strong>Distribution:</strong> 100% allocated to creator wallet on deployment</p>
+      <strong>Token Standard:</strong> BEP-20<br>
+      <strong>Burn Mechanism:</strong> Optional, future consideration<br>
+      <strong>Distribution:</strong> 100% allocated to creator wallet on deployment</p>
 
       <h3>Roadmap</h3>
       <p><strong>Q2 2025:</strong> Token deployment & verification, basic website</p>

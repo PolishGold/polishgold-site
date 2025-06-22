@@ -60,30 +60,10 @@
       text-align: left;
     }
     ul {
-      list-style-type: "🔸 ";
+      list-style-type: "\1F538 ";
       padding-left: 20px;
     }
-    .quote {
-      margin-top: 25px;
-      font-style: italic;
-      color: #ccc;
-      text-align: center;
-    }
-    .whitepaper {
-      margin-top: 40px;
-      text-align: left;
-    }
-    .whitepaper h3 {
-      color: #f5f5f5;
-      margin-top: 20px;
-    }
-    .whitepaper p {
-      margin: 10px 0;
-      line-height: 1.6;
-    }
-    .buy-button,
-    .bsc-button,
-    .private-button {
+    .bsc-button, .buy-button, .private-button {
       display: inline-flex;
       align-items: center;
       margin-top: 30px;
@@ -94,98 +74,22 @@
       border-radius: 8px;
       text-decoration: none;
       box-shadow: 0 4px 8px rgba(255, 204, 0, 0.4);
-      transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
-    .buy-button img,
-    .bsc-button img,
-    .private-button img {
+    .bsc-button img, .buy-button img, .private-button img {
       width: 24px;
       height: 24px;
       margin-right: 10px;
-      vertical-align: middle;
-      object-fit: contain;
-    }
-    .buy-button:hover,
-    .bsc-button:hover,
-    .private-button:hover {
-      background-color: #ffaa00;
-      transform: scale(1.05);
-      box-shadow: 0 6px 12px rgba(255, 170, 0, 0.5);
-    }
-    .social-icons {
-      margin-top: 10px;
-      text-align: center;
-    }
-    .social-icons a {
-      margin: 0 12px;
-      display: inline-block;
-      background: rgba(255,255,255,0.05);
-      padding: 8px;
-      border-radius: 50%;
-    }
-    .social-icons img {
-      width: 32px;
-      height: 32px;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .social-icons a:hover img {
-      transform: scale(1.15);
-      box-shadow: 0 4px 12px rgba(0, 122, 255, 0.4);
-    }
-    .bsc-link {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 20px;
-    }
-    .bsc-link a {
-      margin-left: 8px;
-    }
-    code {
-      background: #222;
-      padding: 4px 6px;
-      border-radius: 4px;
-    }
-    footer {
-      margin-top: 60px;
-      color: #888;
-      font-size: 14px;
-      text-align: center;
-    }
-    .footer-social {
-      margin-top: 20px;
-    }
-    .footer-social a {
-      margin: 0 10px;
-      display: inline-block;
-      background: rgba(255,255,255,0.05);
-      padding: 8px;
-      border-radius: 50%;
     }
     .footer-social img {
       width: 28px;
       height: 28px;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
-    .footer-social a:hover img {
-      transform: scale(1.15);
-      box-shadow: 0 4px 12px rgba(0, 122, 255, 0.4);
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @media (max-width: 600px) {
-      .container {
-        padding: 20px;
-      }
-      .buy-button, .bsc-button, .private-button {
-        flex-direction: column;
-        text-align: center;
-      }
-      .buy-button img, .bsc-button img, .private-button img {
-        margin: 0 0 10px 0;
-      }
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      font-size: 14px;
+      color: #ccc;
     }
   </style>
 </head>
@@ -206,32 +110,31 @@
     <strong>Symbol:</strong> PGLD<br>
     <strong>Decimals:</strong> 18<br>
     <strong>Network:</strong> BNB Smart Chain<br>
-    <strong>Total Supply:</strong> 10,000,000 PGLD<br>
-    PolishGold is a BEP-20 token deployed on Binance Smart Chain with a fixed supply of 10,000,000 tokens. Designed for reliability, backed by the community.</p>
+    <strong>Total Supply:</strong> 10,000,000 PGLD</p>
+
+    <div style="margin-top: 40px;">
+      <iframe width="100%" height="180" src="https://www.youtube.com/embed/Ki3GDfdSA4k" title="PolishGold Project" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
 
     <div class="bsc-link">
       <a class="bsc-button" href="https://bscscan.com/token/0x85af34aE1B1b96020034049157E27972702E046d" target="_blank">
-        <img src="https://img.icons8.com/ios-filled/50/007AFF/search--v1.png" alt="Lupa">
-        View on BscScan
+        <img src="https://img.icons8.com/ios-filled/50/007AFF/search--v1.png" alt="Lupa"> View on BscScan
       </a>
     </div>
 
     <div class="bsc-link">
       <a class="buy-button" href="https://pancakeswap.finance/swap?outputCurrency=0x85af34aE1B1b96020034049157E27972702E046d" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" alt="Koszyk">
-        Buy PGLD on PancakeSwap
+        <img src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" alt="Koszyk"> Buy PGLD on PancakeSwap
       </a>
     </div>
 
     <div class="bsc-link">
       <a class="private-button" href="https://www.dx.app/dxsale/view?address=0x1B92D918210a899a90dbB5c3be67d056c64e80e4&chain=56" target="_blank">
-        <img src="https://img.icons8.com/ios-filled/50/lock-2.png" alt="Private">
-        Private Sale PolishGold
+        <img src="https://img.icons8.com/ios-filled/50/lock-2.png" alt="Private"> Private Sale PolishGold
       </a>
     </div>
   </div>
 
-  <!-- 🗺️ ROADMAP SECTION -->
   <div id="roadmap" class="container">
     <h2>📍 PolishGold Roadmap</h2>
     <div class="info">
@@ -242,7 +145,6 @@
         <li>✅ Official website released</li>
         <li>✅ Shared across crypto groups and Telegram</li>
       </ul>
-
       <h3>Phase 2 – AFTER PRESALE</h3>
       <ul>
         <li>💰 80% of raised funds added to PancakeSwap liquidity</li>
@@ -250,50 +152,40 @@
         <li>📈 Token officially tradable</li>
         <li>👥 Community building (Telegram, YouTube, X)</li>
       </ul>
-
       <h3>Phase 3 – GROWTH (if project gains traction)</h3>
       <ul>
         <li>📋 Apply for CEX listings (Revolut, Gate, Binance)</li>
         <li>🎁 Staking / merch / NFTs (if there's demand)</li>
-        <li>🗳 Community votes decide future direction</li>
+        <li>📦 Community votes decide future direction</li>
       </ul>
     </div>
   </div>
 
-<footer>
-  <div class="footer-social">
-    <a href="https://x.com/Polish_Gold" target="_blank">
-      <img src="https://img.icons8.com/ios-filled/50/007AFF/x.png" alt="X (Twitter)">
-    </a>
-    <a href="https://t.me/PolishGoldOfficial" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111644.png" alt="Telegram">
-    </a>
-    <a href="https://t.me/PolishGoldGroup" target="_blank">
-      <img src="https://img.icons8.com/ios-filled/50/007AFF/group.png" alt="Telegram Group">
-    </a>
-    <a href="https://www.facebook.com/profile.php?id=61577799204501" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
-    </a>
-    <a href="https://www.tiktok.com/@polishgold0?lang=pl-PL" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok">
-    </a>
-    <a href="https://youtube.com/shorts/Ki3GDfdSA4k" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
-    </a>
-  </div>
-
-  <div style="margin-top: 20px; font-size: 14px;">
-    📧 Contact: <a href="mailto:polishgold6@gmail.com" style="color:#ffd700;">polishgold6@gmail.com</a>
-  </div>
-
-  <div style="margin-top: 20px;">
-    <iframe width="300" height="170"
-      src="https://www.youtube.com/embed/Ki3GDfdSA4k"
-      title="PolishGold Project" frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-  </div>
-
-  <p style="margin-top: 30px;">&copy; 2025 PolishGold. Made with ❤️ in Poland.</p>
-</footer>
+  <footer>
+    <div class="footer-social">
+      <a href="https://x.com/Polish_Gold" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/50/007AFF/x.png" alt="X (Twitter)">
+      </a>
+      <a href="https://t.me/PolishGoldOfficial" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111644.png" alt="Telegram">
+      </a>
+      <a href="https://t.me/PolishGoldGroup" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111644.png" alt="Telegram Group">
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61577799204501" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+      </a>
+      <a href="https://www.tiktok.com/@polishgold0?lang=pl-PL" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok">
+      </a>
+      <a href="https://youtube.com/shorts/Ki3GDfdSA4k" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
+      </a>
+    </div>
+    <div style="margin-top: 20px; font-size: 14px;">
+      📧 Contact: <a href="mailto:polishgold6@gmail.com" style="color:#ffd700;">polishgold6@gmail.com</a>
+    </div>
+    <p style="margin-top: 30px;">&copy; 2025 PolishGold. Made with ❤️ in Poland.</p>
+  </footer>
+</body>
+</html>
